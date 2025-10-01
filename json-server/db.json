@@ -1,13 +1,35 @@
 {
-  "posts": [
+  "notifications": [
     {
       "id": "1",
-      "title": "json-server",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
       "userId": "1"
     },
     {
       "id": "2",
-      "title": "json-server",
+      "title": "Уведомление 2",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Уведомление 3",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Уведомление 4",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
       "userId": "2"
     }
   ],
@@ -20,7 +42,9 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -90,7 +114,9 @@
       "views": 5204,
       "createdAt": "20.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -112,7 +138,9 @@
       "views": 1022,
       "createdAt": "16.01.2021",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -134,7 +162,9 @@
       "views": 94002,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -156,7 +186,9 @@
       "views": 10222,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -178,7 +210,9 @@
       "views": 10222,
       "createdAt": "10.12.2021",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -200,7 +234,9 @@
       "views": 100,
       "createdAt": "11.13.2020",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -222,7 +258,9 @@
       "views": 102222,
       "createdAt": "10.08.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -244,7 +282,9 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -266,7 +306,9 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -288,7 +330,9 @@
       "views": 1022,
       "createdAt": "30.01.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -310,7 +354,9 @@
       "views": 1022,
       "createdAt": "01.11.2021",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -332,7 +378,9 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -354,7 +402,9 @@
       "views": 122,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -376,7 +426,9 @@
       "views": 122,
       "createdAt": "18.03.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -398,7 +450,9 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -420,7 +474,9 @@
       "views": 1000,
       "createdAt": "28.12.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -442,7 +498,9 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -464,7 +522,9 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -557,6 +617,18 @@
       "userId": "1",
       "text": "python!!!",
       "id": "p5rMadd"
+    },
+    {
+      "articleId": "12",
+      "userId": "1",
+      "text": "sdsd",
+      "id": "tEZ3xfq"
+    },
+    {
+      "articleId": "12",
+      "userId": "1",
+      "text": "fvdf",
+      "id": "V6jxYFS"
     }
   ],
   "users": [
@@ -564,14 +636,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/6969/production/_93558962_istock-586160412.jpg.webp"
     },
     {
       "id": "2",
+      "username": "mangar",
+      "password": "123",
+      "roles": [
+        "Manager"
+      ],
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "3",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
@@ -597,6 +682,120 @@
       "city": "Moscow",
       "username": "ulbi tv",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "I7ofk1u"
+    },
+    {
+      "userId": "2",
+      "articleId": "2",
+      "rate": 5,
+      "feedback": "asdasdasdasd",
+      "id": "Y7MhPzo"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 1,
+      "feedback": "отстой",
+      "id": "II0a75O"
+    },
+    {
+      "userId": "2",
+      "articleId": "4",
+      "rate": 3,
+      "feedback": "",
+      "id": "bcPnbbZ"
+    },
+    {
+      "articleId": "3",
+      "rate": 0,
+      "userId": "1",
+      "id": "Js1ddB7"
+    },
+    {
+      "articleId": "3",
+      "rate": 5,
+      "userId": "1",
+      "feedback": "",
+      "id": "iH8scGE"
+    },
+    {
+      "articleId": "3",
+      "rate": 5,
+      "userId": "1",
+      "id": "PZonyU6"
+    },
+    {
+      "articleId": "3",
+      "rate": 0,
+      "userId": "1",
+      "feedback": "",
+      "id": "h2kvRv1"
+    },
+    {
+      "articleId": "3",
+      "rate": 5,
+      "userId": "1",
+      "feedback": "",
+      "id": "gxpYnbT"
+    },
+    {
+      "articleId": "3",
+      "rate": 0,
+      "userId": "1",
+      "feedback": "апапапаап",
+      "id": "2AVOiXj"
+    },
+    {
+      "articleId": "3",
+      "rate": 4,
+      "userId": "1",
+      "feedback": "fgfgfп",
+      "id": "qDYfGq4"
+    },
+    {
+      "articleId": "2",
+      "rate": 5,
+      "userId": "1",
+      "feedback": "",
+      "id": "Kv7Nqhv"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "2"
     }
   ]
 }

@@ -13,7 +13,14 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'ulbi-tv-plugin',
+    'unused-imports',
+  ],
   rules: {
     'react/jsx-filename-extension': [
       2,
@@ -34,7 +41,18 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', 'to', 'target'],
+        ignoreAttribute: [
+          'data-testid',
+          'to',
+          'target',
+          'justify',
+          'align',
+          'direction',
+          'gap',
+          'role',
+          'as',
+          'border',
+        ],
       },
     ],
     'max-len': ['error', { ignoreComments: true, code: 125 }],
@@ -48,7 +66,27 @@ module.exports = {
     'comma-dangle': 'off',
     'no-undef': 'off',
     'object-curly-newline': 'off',
+    'unused-imports/no-unused-imports': 'error',
     'react/no-array-index-key': 'off',
+    'ulbi-tv-plugin/path-checker': ['error', { alias: '@' }],
+    'ulbi-tv-plugin/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
+    'ulbi-tv-plugin/public-api-imports': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: [
+          '**/*.test.*',
+          '**/*.story.*',
+          '**/StoreDecorator.tsx',
+        ],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,

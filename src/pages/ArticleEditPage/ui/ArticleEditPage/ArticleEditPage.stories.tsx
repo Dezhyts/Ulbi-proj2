@@ -1,12 +1,14 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ArticleEditPage from 'pages/ArticleEditPage/ui/ArticleEditPage/ArticleEditPage';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import ArticleEditPage from '../../ui/ArticleEditPage/ArticleEditPage';
 
 export default {
-  title: 'pages/ArticleEditPage',
+  title: 'pages/ArticleEditPage/ArticleEditPage',
   component: ArticleEditPage,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ArticleEditPage>;
 
 const Template: ComponentStory<typeof ArticleEditPage> = (args) => (

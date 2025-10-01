@@ -1,8 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { Select } from 'shared/ui/Select/Select';
-import { Currency } from 'entities/Currency';
 import { memo, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { ListBox } from '@/shared/ui/Popups';
+import { Currency } from '../../model/types/currency';
 
 interface CurrencySelectProps {
   className?: string;
@@ -12,9 +11,7 @@ interface CurrencySelectProps {
 }
 
 export const CurrencySelect = memo((props: CurrencySelectProps) => {
-  const {
-    className, value, onChange, readonly
-  } = props;
+  const { className, value, onChange, readonly } = props;
   const { t } = useTranslation();
 
   const onChangeHandler = useCallback(
@@ -29,14 +26,17 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
     { value: Currency.EUR, content: Currency.EUR },
     { value: Currency.USD, content: Currency.USD },
   ];
+
   return (
-    <Select
-      className={classNames('', {}, [className])}
-      label={t('Укажите валюту')}
-      options={options}
+    <ListBox
+      className={className}
       value={value}
       onChange={onChangeHandler}
+      items={options}
+      defaultValue={t('Укажите валюту')}
       readonly={readonly}
+      direction="top right"
+      label={t('Укажите валюту')}
     />
   );
 }); // будет перерисовка (массивы,объекты пропсов-всегда мемоизируешь)

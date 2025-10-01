@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input } from 'shared/ui/Input/Input';
+import { Page } from '@/widgets/Page';
 
 const MainPage = () => {
   const { t } = useTranslation();
@@ -10,7 +10,7 @@ const MainPage = () => {
     setValue(val);
   };
 
-  return <div>{t('Главная страница')}</div>;
+  return <Page>{t('Главная страница')}</Page>;
 };
 
 export default MainPage;

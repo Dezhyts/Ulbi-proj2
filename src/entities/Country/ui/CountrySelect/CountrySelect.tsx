@@ -1,7 +1,6 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Select } from 'shared/ui/Select/Select';
+import { ListBox } from '@/shared/ui/Popups';
 import { Country } from '../../model/types/country';
 
 interface CountrySelectProps {
@@ -12,9 +11,7 @@ interface CountrySelectProps {
 }
 
 export const CountrySelect = memo((props: CountrySelectProps) => {
-  const {
-    className, value, onChange, readonly
-  } = props;
+  const { className, value, onChange, readonly } = props;
   const { t } = useTranslation();
 
   const onChangeHandler = useCallback(
@@ -31,14 +28,17 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
     { value: Country.Russia, content: Country.Russia },
     { value: Country.Ukraine, content: Country.Ukraine },
   ];
+
   return (
-    <Select
-      className={classNames('', {}, [className])}
-      label={t('Укажите страну')}
-      options={options}
+    <ListBox
+      className={className}
       value={value}
       onChange={onChangeHandler}
+      items={options}
+      defaultValue={t('Укажите страну')}
       readonly={readonly}
+      direction="top right"
+      label={t('Укажите страну')}
     />
   );
 }); // будет перерисовка (массивы,объекты пропсов-всегда мемоизируешь)

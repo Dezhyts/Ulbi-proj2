@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ArticleTypeTabs } from 'entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
+import { ArticleTypeTabs } from '../../ui/ArticleTypeTabs/ArticleTypeTabs';
 
 export default {
   title: 'entities/Article/ArticleTypeTabs',

@@ -1,34 +1,25 @@
 const fs = require('fs');
 const jsonServer = require('json-server');
 const path = require('path');
+const cors = require('cors');
 
 const server = jsonServer.create();
 const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
 
-server.use(jsonServer.defaults({}));
+// --- CORS ---
+server.use(
+  cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
+
+// --- Служебные middlewares ---
+server.use(jsonServer.defaults());
 server.use(jsonServer.bodyParser);
 
-server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(200);
-  }
-
-  return next(); // добавляем return здесь
-});
-
-// Нужно для небольшой задержки, чтобы запрос проходил не мгновенно, имитация реального апи
-server.use(async (req, res, next) => {
-  await new Promise((res) => {
-    setTimeout(res, 800);
-  });
-  next();
-});
-
-// Эндпоинт для логина
+// --- Логин ---
 server.post('/login', (req, res) => {
   try {
     const { username, password } = req.body;
@@ -47,24 +38,29 @@ server.post('/login', (req, res) => {
 
     return res.status(403).json({ message: 'User not found' });
   } catch (e) {
-    console.log(e);
+    console.error(e);
     return res.status(500).json({ message: e.message });
   }
 });
 
-// проверяем, авторизован ли пользователь
-// eslint-disable-next-line
+// --- Авторизация для остальных маршрутов ---
 server.use((req, res, next) => {
+  // Пропускаем preflight
+  if (req.method === 'OPTIONS') {
+    return next();
+  }
+
   if (!req.headers.authorization) {
     return res.status(403).json({ message: 'AUTH ERROR' });
   }
 
-  next();
+  return next();
 });
 
+// --- Подключаем маршрутизатор ---
 server.use(router);
 
-// запуск сервера
+// --- Запуск ---
 server.listen(8000, () => {
   console.log('server is running on 8000 port');
 });

@@ -1,4 +1,5 @@
-import 'app/styles/index.scss';
+/* eslint-disable ulbi-tv-plugin/layer-imports */
+import '@/app/styles/index.scss';
 import { Story } from '@storybook/react';
 
 export const StyleDecorator = (story: () => Story) => story();

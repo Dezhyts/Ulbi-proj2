@@ -1,18 +1,19 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
-import { Text, TextSize } from 'shared/ui/Text/Text';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
-import { Article, ArticleView } from '../../model/types/article';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text, TextSize } from '@/shared/ui/Text';
+import { ArticleView } from '../../model/consts/consts';
+import { Article } from '../../model/types/article';
+import { ArticleListItemSkeleton } from '../../ui/ArticleListItem/ArticleListItemSkeleton';
 import cls from './ArticleList.module.scss';
 
 interface ArticleListProps {
   className?: string;
   articles: Article[];
   isLoading?: boolean;
-  view?: ArticleView;
   target?: HTMLAttributeAnchorTarget;
+  view?: ArticleView;
 }
 
 const getSkeletons = (view: ArticleView) =>
@@ -26,21 +27,11 @@ export const ArticleList = memo((props: ArticleListProps) => {
   const {
     className,
     articles,
-    isLoading,
     view = ArticleView.SMALL,
+    isLoading,
     target,
   } = props;
   const { t } = useTranslation();
-
-  const renderArticle = (article: Article) => (
-    <ArticleListItem
-      article={article}
-      view={view}
-      className={cls.card}
-      key={article.id}
-      target={target}
-    />
-  );
 
   if (!isLoading && !articles.length) {
     return (
@@ -52,7 +43,15 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
   return (
     <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-      {articles.length > 0 ? articles.map(renderArticle) : null}
+      {articles.map((item) => (
+        <ArticleListItem
+          article={item}
+          view={view}
+          target={target}
+          key={item.id}
+          className={cls.card}
+        />
+      ))}
       {isLoading && getSkeletons(view)}
     </div>
   );

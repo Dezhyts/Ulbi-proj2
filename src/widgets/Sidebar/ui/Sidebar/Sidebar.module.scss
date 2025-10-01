@@ -9,8 +9,6 @@
 .items {
   margin-top: 20px;
   margin-left: 30px;
-  display: flex;
-  flex-direction: column;
 }
 
 .switchers {
@@ -29,7 +27,7 @@
   position: absolute;
   right: -32px;
   bottom: 32px;
-  z-index: 100;
+  z-index: 10;
 }
 
 .collapsed {

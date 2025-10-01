@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Tabs } from 'shared/ui/Tabs/Tabs';
+import { Tabs } from '../Tabs/Tabs';
 
 export default {
   title: 'shared/Tabs',

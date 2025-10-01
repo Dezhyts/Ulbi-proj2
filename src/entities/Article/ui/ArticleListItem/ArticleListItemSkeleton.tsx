@@ -1,13 +1,8 @@
-import { memo, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
-import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Card } from 'shared/ui/Card/Card';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
-import { Text } from 'shared/ui/Text/Text';
-import { ArticleView } from '../../model/types/article';
+import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Card } from '@/shared/ui/Card';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemSkeletonProps {

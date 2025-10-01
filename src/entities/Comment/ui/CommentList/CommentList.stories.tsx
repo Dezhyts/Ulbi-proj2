@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { CommentList } from 'entities/Comment/ui/CommentList/CommentList';
+import { CommentList } from '../../ui/CommentList/CommentList';
 
 export default {
   title: 'entities/Comment/CommentList',
