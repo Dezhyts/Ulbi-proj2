@@ -68,6 +68,7 @@ module.exports = {
     'object-curly-newline': 'off',
     'unused-imports/no-unused-imports': 'error',
     'react/no-array-index-key': 'off',
+    'linebreak-style': 'off',
     'ulbi-tv-plugin/path-checker': ['error', { alias: '@' }],
     'ulbi-tv-plugin/layer-imports': [
       'error',

@@ -1,13 +1,10 @@
 import { useTranslation } from 'react-i18next';
+import { Page } from '@/widgets/Page';
 
 const AdminPanelPage = () => {
   const { t } = useTranslation('about');
 
-  return (
-    <div>
-      {t('Админ панель')}
-    </div>
-  );
+  return <Page data-testid="AdminPanelPage">{t('Админ панель')}</Page>;
 };
 
 export default AdminPanelPage;

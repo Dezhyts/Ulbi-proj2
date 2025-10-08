@@ -9,7 +9,6 @@ interface ArticleListItemSkeletonProps {
   className?: string;
   view: ArticleView;
 }
-
 export const ArticleListItemSkeleton = memo(
   (props: ArticleListItemSkeletonProps) => {
     const { className, view } = props;
