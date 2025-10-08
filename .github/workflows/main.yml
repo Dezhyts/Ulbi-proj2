@@ -68,8 +68,23 @@ jobs:
       - name: build production project
         run: npm run build:prod
         if: always()
+      - name: Generate HTML report
+        run: npm run test:ui:report
+        if: always()
       - name: build storybook
         run: npm run storybook:build
+        if: always()
+      - name: unit testing
+        run: npm run test:unit
+        if: always()
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+        if: always()
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        if: always()
+        with:
+          path: 'reports'
 
   checks:
     runs-on: ubuntu-latest
