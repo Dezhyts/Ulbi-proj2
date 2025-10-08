@@ -34,6 +34,10 @@ export default ({ config }: { config: webpack.Configuration }) => {
     use: ['@svgr/webpack'],
   });
   config!.module!.rules.push(buildCssLoader(true));
+  config!.module!.rules.push({
+    test: /\.(png|jpe?g|gif|webp)$/i, // поддерживаем jpg, png, gif, webp
+    type: 'asset/resource', // webpack 5: копирует файлы и возвращает путь
+  });
 
   config!.plugins!.push(
     new DefinePlugin({
