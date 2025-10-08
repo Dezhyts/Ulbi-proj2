@@ -70,14 +70,6 @@ jobs:
         if: always()
       - name: build storybook
         run: npm run storybook:build
-        if: always()
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-        if: always()
-      - name: Deploy to GitHub Pages
-        id: deployment
-        if: always()
-        uses: actions/deploy-pages@v1
 
   checks:
     runs-on: ubuntu-latest
