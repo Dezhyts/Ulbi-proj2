@@ -30,7 +30,7 @@ export const Card = memo((props: CardProps) => {
         {
           [cls.max]: max,
         },
-        [className, cls[theme]]
+        [className, cls[theme]],
       )}
       {...otherProps}
     >

@@ -1,7 +1,4 @@
-import {
-  createEntityAdapter,
-  createSlice,
-} from '@reduxjs/toolkit';
+import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { Article } from '@/entities/Article';
 import { fetchArticleRecommendations } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
@@ -15,7 +12,7 @@ export const getArticleRecommendations =
   recommendationsAdapter.getSelectors<StateSchema>(
     (state) =>
       state.articleDetailsPage?.recommendations ||
-      recommendationsAdapter.getInitialState()
+      recommendationsAdapter.getInitialState(),
   );
 
 const articleDetailsPageRecommendataionsSlice = createSlice({
@@ -27,7 +24,7 @@ const articleDetailsPageRecommendataionsSlice = createSlice({
         error: undefined,
         ids: [],
         entities: {},
-      }
+      },
     ),
   reducers: {},
   extraReducers: (builder) => {

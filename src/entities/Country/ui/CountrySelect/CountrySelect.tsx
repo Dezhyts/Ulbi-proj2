@@ -18,7 +18,7 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
     (value: string) => {
       onChange?.(value as Country);
     },
-    [onChange]
+    [onChange],
   );
 
   const options = [

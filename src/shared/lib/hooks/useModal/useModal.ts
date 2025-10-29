@@ -39,7 +39,7 @@ export function useModal({ animationDelay, isOpen, onClose }: UseModalProps) {
         close();
       }
     },
-    [close]
+    [close],
   );
 
   const onContentClick = (e: React.MouseEvent) => {

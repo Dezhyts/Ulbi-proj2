@@ -20,7 +20,7 @@ function TabsComponent<T extends string | number>(props: TabsProps<T>) {
 
   const clickHandle = useCallback(
     (tab: TabItem<T>) => () => onTabCLick(tab),
-    [onTabCLick]
+    [onTabCLick],
   );
 
   return (

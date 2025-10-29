@@ -18,7 +18,7 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
     (value: string) => {
       onChange?.(value as Currency);
     },
-    [onChange]
+    [onChange],
   );
 
   const options = [

@@ -39,21 +39,21 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
         console.log(e);
       }
     },
-    [articleId, rateArticleMutation, userData?.id]
+    [articleId, rateArticleMutation, userData?.id],
   );
 
   const onCancel = useCallback(
     (starsCount: number) => {
       handleRateArticle(starsCount);
     },
-    [handleRateArticle]
+    [handleRateArticle],
   );
 
   const onAccept = useCallback(
     (starsCount: number, feedback?: string) => {
       handleRateArticle(starsCount, feedback);
     },
-    [handleRateArticle]
+    [handleRateArticle],
   );
 
   if (isLoading) {
@@ -69,7 +69,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
       className={className}
       title={t('Оцените статью')}
       feedbackTitle={t(
-        'Оставьте свой отзыв о статье,это поможет улучшить качество'
+        'Оставьте свой отзыв о статье,это поможет улучшить качество',
       )}
       hasFeedback
     />

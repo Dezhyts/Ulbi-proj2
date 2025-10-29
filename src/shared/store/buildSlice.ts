@@ -15,7 +15,7 @@ export function buildSlice<
     const dispatch = useDispatch();
     return useMemo(
       () => bindActionCreators(slice.actions, dispatch),
-      [dispatch]
+      [dispatch],
     );
   };
 

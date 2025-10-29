@@ -38,7 +38,7 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
         Icon: ArticleIcon,
         text: 'Статьи',
         authOnly: true,
-      }
+      },
     );
   }
   return sidebarItemsList;
